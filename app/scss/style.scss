@@ -1,7 +1,7 @@
-html{
-  box-sizing: border-box;
-}
+@import '_vars.scss';
+@import '_fonts.scss';
+@import '_global.scss';
 
-*, *::before, *::after{
-  box-sizing: inherit;
-}
+
+
+@import '_media.scss';
