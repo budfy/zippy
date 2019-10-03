@@ -1,7 +1,99 @@
-@import '_vars.scss';
-@import '_fonts.scss';
-@import '_global.scss';
+@import 'vars';
+@import 'fonts';
+@import 'global';
+//START OF STYLES
 
+//Start of header styles
+.header-top__inner{
+  min-height: 63px;
+  width: 100%;
 
+  & .scrolled{
+    background-color: rgba(80, 80, 80, .5);
+  }
 
-@import '_media.scss';
+  & .container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 63px;
+  }
+
+  .header-top__menu ul li{
+    display: inline-block;
+    a{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      margin-left: 40px;
+      &:hover{
+        color:$yellow;
+      }
+    }
+  }
+}
+
+.header__text-inner{
+  margin-top: 193px;
+  color:white;
+  max-width: 500px;
+
+  &-title{
+    @include monbold;
+    font-size: 41px;
+    margin-bottom: 43px;
+  }
+
+  &-text{
+    @include robo;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.header__bg-slider{
+  max-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  &-slide{
+    background-color: $bggrey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-width: 100vh;
+    min-height: 100vh;
+  }
+
+  .slick-dots{
+    bottom: -37px;
+    left: 50%;
+    display: flex;
+    position: absolute;
+    li{
+      
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 10px;
+
+      button{
+        font-size: 0;
+        height: 17px;
+      width: 17px;
+      border-radius: 50%;
+      background-color: #fff;
+      
+      }
+    }
+  }
+}
+//End of header styles
+
+//END OF STYLES
+@import 'media';
