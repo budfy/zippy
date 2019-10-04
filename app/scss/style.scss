@@ -7,6 +7,9 @@
 .header-top__inner{
   min-height: 63px;
   width: 100%;
+  position: absolute;
+  top:0;
+  z-index: 20;
 
   & .scrolled{
     background-color: rgba(80, 80, 80, .5);
@@ -40,6 +43,8 @@
   margin-top: 193px;
   color:white;
   max-width: 500px;
+  position: absolute;
+  z-index: 1;
 
   &-title{
     @include monbold;
@@ -57,9 +62,7 @@
 .header__bg-slider{
   max-width: 100%;
   min-height: 100vh;
-  position: absolute;
   top: 0;
-  z-index: -1;
   &-slide{
     background-color: $bggrey;
     background-size: cover;
@@ -70,7 +73,7 @@
   }
 
   .slick-dots{
-    bottom: -37px;
+    bottom: 37px;
     left: 50%;
     display: flex;
     position: absolute;
