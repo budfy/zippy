@@ -59,6 +59,11 @@
   }
 }
 
+.header__background{
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
 .header__bg-slider{
   max-width: 100%;
   min-height: 100vh;
@@ -78,20 +83,22 @@
     display: flex;
     position: absolute;
     li{
-      
-      height: 7px;
-      width: 7px;
-      border-radius: 50%;
-      background-color: #fff;
-      margin: 0 10px;
-
+     
       button{
         font-size: 0;
-        height: 17px;
-      width: 17px;
-      border-radius: 50%;
-      background-color: #fff;
-      
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+      }
+      &+li{
+        margin-left: 8px;
+      }
+      &.slick-active{
+        button{
+          background-color: #fff;
+        }
       }
     }
   }
