@@ -62,6 +62,35 @@
 .header__background{
   max-height: 100vh;
   overflow-y: hidden;
+  &>.container{
+    position: relative;
+  }
+}
+
+.slick-dots{
+  bottom: 37px;
+  left: 0;
+  display: flex;
+  position: absolute;
+  
+  li{
+   button{
+      font-size: 0;
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+    }
+    &+li{
+      margin-left: 8px;
+    }
+    &.slick-active{
+      button{
+        background-color: #fff;
+      }
+    }
+  }
 }
 
 .header__bg-slider{
@@ -75,32 +104,6 @@
     background-position: top center;
     min-width: 100vh;
     min-height: 100vh;
-  }
-
-  .slick-dots{
-    bottom: 37px;
-    left: 50%;
-    display: flex;
-    position: absolute;
-    li{
-     
-      button{
-        font-size: 0;
-        height: 7px;
-        width: 7px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-      }
-      &+li{
-        margin-left: 8px;
-      }
-      &.slick-active{
-        button{
-          background-color: #fff;
-        }
-      }
-    }
   }
 }
 //End of header styles

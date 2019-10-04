@@ -2,7 +2,7 @@ $(function(){
 
   $('.header__bg-slider').slick({
     dots: true,
-    appendDots: $('.container'),
+    appendDots: $('.dots-inner'),
     infinite: true,
     speed: 1500,
     fade: true,
