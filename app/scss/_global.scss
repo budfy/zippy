@@ -11,6 +11,11 @@ html, body{
   height:100%;
 }
 
+body{
+  color: $txtcol;
+
+}
+
 *, *::before, *::after{
   box-sizing: inherit;
 }
@@ -52,13 +57,20 @@ ul,li{
 .btn__link{
   padding: 16px 26px;
   background-color: $yellow;
-  color: black;
+  color: $lnkcol;
   @include monbold;
   font-size: 11px;
-  border-radius: 2px;
+  border-radius: 3px;
   text-transform: uppercase;
+  transition: all .3s;
   &:hover{
     background-color: $violet;
     color: white;
   }
+}
+
+.section__title{
+  @include monbold;
+  font-size: 45px;
+  padding: 80px 0;
 }

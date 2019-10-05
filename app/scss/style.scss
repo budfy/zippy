@@ -2,111 +2,92 @@
 @import 'fonts';
 @import 'global';
 //START OF STYLES
+@import 'header';
 
-//Start of header styles
-.header-top__inner{
-  min-height: 63px;
-  width: 100%;
-  position: absolute;
-  top:0;
-  z-index: 20;
+//==========Start of welcome sectuon style==========
+.welcome{
+  text-align: center;
 
-  & .scrolled{
-    background-color: rgba(80, 80, 80, .5);
-  }
-
-  & .container{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 63px;
-  }
-
-  .header-top__menu ul li{
-    display: inline-block;
-    a{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      color: white;
-      text-transform: uppercase;
-      margin-left: 40px;
-      &:hover{
-        color:$yellow;
-      }
-    }
-  }
-}
-
-.header__text-inner{
-  margin-top: 193px;
-  color:white;
-  max-width: 500px;
-  position: absolute;
-  z-index: 1;
-
-  &-title{
-    @include monbold;
-    font-size: 41px;
-    margin-bottom: 43px;
-  }
-
-  &-text{
+  &__text{
+    max-width: 424px;
+    text-align: left;
+    margin-right: 72px;
     @include robo;
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 30px;
+    padding-top: 20px;
   }
-}
 
-.header__background{
-  max-height: 100vh;
-  overflow-y: hidden;
-  &>.container{
-    position: relative;
+  &__inner{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 8px;
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 58px;
   }
-}
+  &__wrapper{
+    display: flex;
+    margin-top: 77px;
+    justify-content: space-between;
+    min-width: 100%;
 
-.slick-dots{
-  bottom: 37px;
-  left: 0;
-  display: flex;
-  position: absolute;
-  
-  li{
-   button{
-      font-size: 0;
-      height: 7px;
-      width: 7px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.5);
-      border: none;
-    }
-    &+li{
-      margin-left: 8px;
-    }
-    &.slick-active{
-      button{
-        background-color: #fff;
-      }
+    &-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 163px;
     }
   }
-}
 
-.header__bg-slider{
-  max-width: 100%;
-  min-height: 100vh;
-  top: 0;
-  &-slide{
-    background-color: $bggrey;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    min-width: 100vh;
-    min-height: 100vh;
+  .item__icon{
+    background-color: $violet;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+    
+    .welcome__item-icon{
+      margin: auto;
+    }
+  }
+
+
+  .item__title{
+    color: $violet;
+    text-transform: uppercase;
+    max-width: 120px;
+    padding: 34px 0 28px 0;
+    @include monbold;
+    font-size: 14px;
+  }
+
+  .item__text{
+    color: #040405;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-bottom: 35px;
   }
 }
-//End of header styles
+//==========End of welcome sectuon style==========
+
+
+
+//==========Start of Projects sectuon style==========
+.projects{
+  text-align: center;
+
+  &__wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__item{
+    max-width: 25%;
+  }
+}
+//==========End of Projects sectuon style==========
 
 //END OF STYLES
 @import 'media';
