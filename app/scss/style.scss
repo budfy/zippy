@@ -82,6 +82,7 @@
   &__wrapper{
     display: flex;
     flex-wrap: nowrap;
+    max-width: 1400px;
   }
 
   &__item{
@@ -90,6 +91,10 @@
     text-align: left;
     transition: all .3s;
     overflow: hidden;
+    &-top{
+      background-color: $grey;
+    }
+
     &:hover{
       background-color: $yellow;
       .projects__item-img{
