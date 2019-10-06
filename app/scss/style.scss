@@ -83,8 +83,54 @@
     display: flex;
     flex-wrap: nowrap;
   }
+
   &__item{
     max-width: 25%;
+    background-color: $lgrey;
+    text-align: left;
+    transition: all .3s;
+    overflow: hidden;
+    &:hover{
+      background-color: $yellow;
+      .projects__item-img{
+        overflow: hidden;
+        &-inner{
+         transform: scale(1.1);
+        }
+      }
+      .projects__btn{
+        background-color: $violet;
+        color: white;
+      }
+    }
+
+    &-img{
+      height: 485px;
+      width: 350px;
+      
+      &-inner{
+        background-color: #656568;
+        min-height: 100%;
+        min-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &-title{
+      @include monbold;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 46px 35px 17px 44px;
+    }
+
+    &-text{
+      margin: 0 35px 0 43px;
+    }
+  }
+
+  &__btn{
+    margin: 15px auto 47px 44px;
   }
 }
 //==========End of Projects sectuon style==========

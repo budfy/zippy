@@ -6,7 +6,13 @@ let gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     cssmin = require('gulp-cssmin'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    rigger = require('gulp-rigger'),
+    path = {
+      build: { //Тут мы укажем куда складывать готовые после сборки файлы
+          html: 'app/'
+        }};
 
 gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
@@ -21,7 +27,12 @@ gulp.task('sass', function () {
 
 gulp.task('imagemin', function(){
   gulp.src('app/images/*')
-  .pipe(imagemin())
+  .pipe(imagemin({
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}],
+    use: [pngquant()],
+    interlaced: true
+  }))
   .pipe(gulp.dest('app/images/'))
 });
 
@@ -40,7 +51,15 @@ gulp.task('script-js', function(){
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('app/js'))
+  .pipe(browserSync.reload({stream: true}))
 })
+
+gulp.task('html:build', function () {
+  gulp.src(['app/**/*.html'])
+      .pipe(rigger()) //Прогоним через rigger
+      .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+      .pipe(browserSync.reload({stream: true})); //И перезагрузим наш сервер для обновлений
+});
 
 gulp.task('style', function(){
   return gulp.src([
@@ -81,11 +100,14 @@ gulp.task('browser-sync', function() {
       server: {
           baseDir: "app/"
       },
-      tunnel: true,
-      browser: ["firefox"]
+    // tunnel: true,
+    host: 'localhost',
+    port: 3000,
+    logPrefix: "budfy",
+    browser: ["firefox"]
   });  
 });
 
 
 
-gulp.task('default', gulp.parallel('sass','browser-sync', 'script', 'script-js', 'style', 'imagemin', 'watch'))
+gulp.task('default', gulp.parallel('sass','browser-sync', 'script', 'html:build', 'script-js', 'style', 'imagemin', 'watch'))
