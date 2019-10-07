@@ -89,4 +89,22 @@ $(function(){
     ]
   });
 
+  $('.lifein__gallery').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    asNavFor: '.slider-nav'
+  });
+  $('.lifein__nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
 });

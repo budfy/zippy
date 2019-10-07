@@ -6,8 +6,7 @@
 
 //==========Start of welcome sectuon style==========
 .welcome{
-  text-align: center;
-
+  
   &__text{
     max-width: 424px;
     text-align: left;
@@ -77,8 +76,7 @@
 
 //==========Start of Projects sectuon style==========
 .projects{
-  text-align: center;
-
+  
   &__wrapper{
     display: flex;
     flex-wrap: nowrap;
@@ -144,7 +142,6 @@
 
 //==========Start of Pricing sectuon style==========
 .pricing{
-  text-align: center;
   margin-bottom: 87px;
   
   &__inner{
@@ -200,7 +197,6 @@
 //==========Start of Video sectuon style==========
 .video{
   background-color: $violet;
-  text-align: center;
   padding-bottom: 150px;
   .section__title{
     color: white;
@@ -289,7 +285,7 @@
 
 //==========Start of Team sectuon style==========
 .team{
-  text-align: center;
+  margin-bottom: 136px;
 
   &__inner{
     display: flex;
@@ -306,6 +302,10 @@
 
     &:nth-child(4){
       margin-left: 0;
+    }
+
+    &:nth-child(n+4){
+      margin-bottom: 0;
     }
 
     &-photo{
@@ -357,6 +357,39 @@
   }
 }
 //==========End of Team sectuon style==========
+
+
+
+//==========Start of Lifein sectuon style==========
+.lifein{
+  background-color: $lgrey;
+
+  &__gallery{
+    width: 700px;
+    height: 430px;
+    margin-bottom: 13px;
+    
+    &-item{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav{
+    width: 700px;
+    height: 150px;
+
+    &-item{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+//==========End of Lifein sectuon style==========
 
 //END OF STYLES
 @import 'media';
