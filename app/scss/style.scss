@@ -140,5 +140,158 @@
 }
 //==========End of Projects sectuon style==========
 
+
+
+//==========Start of Pricing sectuon style==========
+.pricing{
+  text-align: center;
+  margin-bottom: 87px;
+  
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  &__item{
+    display: block;
+    text-align: center;
+    align-items: center;
+    width: 33%;
+    &+div{
+      border-left: 2px solid $lgrey;
+    }
+
+    &-title{
+      @include monbold;
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    &-price{
+      @include monbold;
+      color: $grey;
+      margin-bottom: 22px;
+    }
+
+    &-description{
+      //max-width: 100px;
+      font-family: 'Helvetoca' sans-serif;
+      font-size: 10px;
+      line-height: 23px;
+      margin: 0 auto;
+      span{
+        display: block;
+      }
+    }
+
+    .btn__link{
+      padding: 10px 30px;
+      font-size: 10px;
+      margin-top: 26px;
+    }
+  }
+}
+//==========End of Pricing sectuon style==========
+
+
+
+//==========Start of Video sectuon style==========
+.video{
+  background-color: $violet;
+  text-align: center;
+  padding-bottom: 150px;
+  .section__title{
+    color: white;
+  }
+
+  &__popup{
+    width: 70%;
+    max-width: 700px;
+    background-color: $lgrey;
+    padding: 20px;
+    margin: 0 auto;
+
+    &-link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 690px;
+      height: 460px;
+      transition: all 0.3s;
+      background-color: rgba(0, 0, 0, 0);
+      &:hover{
+        background-color: rgba(0, 0, 0, .68);
+        
+      }
+    }
+  }
+
+  &__content{
+    max-width: 100%;
+  }
+
+  &__slide{
+    min-width: 100%;
+    height: 500px;
+    position: relative;
+
+    &-inner{
+      min-width: 690px;
+      height: 460px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 18px;
+      position: relative;
+      
+    }
+  }
+
+  &__text{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:23px 18px;
+    color: #fefefe;
+    text-transform: uppercase;
+    @include monbold;
+    font-size: 10px;
+  }
+
+  .slick-arrow{
+    position: absolute;
+    top:50%;
+    z-index: 1;
+    font-size: 0;
+    border: none;
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: transparent;background-size: cover;
+  }
+
+  .slick-prev{
+    left: 20px;
+    background-image: url(../images/icons/prev-arrow.png);
+  }
+
+  .slick-next{
+    right: 20px;
+    background-image: url(../images/icons/next-arrow.png);
+  }
+}
+//==========End of Video sectuon style==========
+
+
+
+//==========Start of Team sectuon style==========
+.team{
+  text-align: center;
+}
+//==========End of Team sectuon style==========
+
 //END OF STYLES
 @import 'media';

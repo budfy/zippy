@@ -31,6 +31,11 @@ ul,li{
   list-style: none;
 }
 
+.container-max{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .container{
   max-width: 700px;
   margin: 0 auto;
@@ -63,6 +68,7 @@ ul,li{
   border-radius: 3px;
   text-transform: uppercase;
   transition: all .3s;
+  display: inline-block;
   &:hover{
     background-color: $violet;
     color: white;
@@ -72,5 +78,5 @@ ul,li{
 .section__title{
   @include monbold;
   font-size: 45px;
-  padding: 80px 0;
+  padding: 80px 0 45px 0;
 }
