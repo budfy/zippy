@@ -6,6 +6,7 @@ $lgrey: #efefef;
 $bggrey: #bdbdbd;
 $txtcol: #040405;
 $lnkcol: #323232;
+$bgcolor: #fefefe;
 
 @mixin monbold {
   font-family: 'Montserrat', sans-serif;
@@ -15,4 +16,10 @@ $lnkcol: #323232;
 @mixin robo {
   font-family: 'Roboto',sans-serif;
   font-weight: 100;
+}
+
+@mixin bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

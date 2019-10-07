@@ -168,12 +168,11 @@
 
     &-price{
       @include monbold;
-      color: $grey;
+      color: #9d9d9d;
       margin-bottom: 22px;
     }
 
     &-description{
-      //max-width: 100px;
       font-family: 'Helvetoca' sans-serif;
       font-size: 10px;
       line-height: 23px;
@@ -236,9 +235,7 @@
     &-inner{
       min-width: 690px;
       height: 460px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      @include bg;
       margin: 0 18px;
       position: relative;
       
@@ -264,9 +261,8 @@
     border: none;
     height: 32px;
     width: 32px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background: transparent;background-size: cover;
+    @include bg;
+    background: transparent;
   }
 
   .slick-prev{
@@ -369,9 +365,7 @@
     margin-bottom: 13px;
     
     &-item{
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      @include bg;
       width: 700px;
       height: 430px;
     }
@@ -386,9 +380,7 @@
       width: 111px !important;
       height: 69px;
       margin: 0 13px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      @include bg;
     }
 
     .slick-arrow{
@@ -404,6 +396,8 @@
     
     &::before{
       content: '';
+      display: block;
+      margin: 0 auto;
       height: 14px;
       width: 9px;
       background-size: cover;
@@ -431,9 +425,119 @@
       }
     }
   }
-
 }
 //==========End of Lifein sectuon style==========
+
+
+
+//==========Start of Newsletter signup sectuon style==========
+.signup{
+    
+  &__inner{
+    position: relative;
+
+    form{
+      position: relative;
+    }
+    
+    h2{
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    }
+
+    &-input, &-button{
+      border:none;
+      height: 53px;
+    }
+
+    &-input{
+      width: 415px;
+      border-radius: 3px 0 0 3px;
+      padding: 18px 16px;
+      margin-right: 131px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 40px;
+      color: $txtcol;
+      &::placeholder{
+        color:#d8d8d8;
+      }
+    }
+    
+    &-button{
+      position: absolute;
+      border-radius:0 3px 3px 0;
+      padding: 23px 43px;
+      color:#323232;
+      background-color: $yellow;
+      @include monbold;
+      font-size: 11px;
+      text-transform: uppercase;
+      line-height: 11px;
+      right: 74px;
+
+      &:hover{
+        background-color: $violet;
+        color: #fefefe;
+      }
+    }
+  }
+}
+
+#signup__bg {
+  width: 100%;
+  min-height: 100%;
+  @include bg;
+  padding-bottom: 150px;
+}
+//==========End of Newsletter signup sectuon style==========
+
+
+
+//==========Start of Blog sectuon style==========
+.blog{
+  margin-bottom: 88px;
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    max-width: 208px;
+    &+div{
+      margin-left: 36px;
+    }
+
+    &-picture{
+      @include bg;
+      width: 208px;
+      height: 112px;
+      margin-bottom: 39px;
+    }
+
+    &-title a{
+      @include monbold;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: $txtcol;
+      padding-bottom: 25px;
+    }
+
+    &-date, &-lead{
+      font-family: "Helvetica", sans-serif;
+      font-size: 13px;
+      color: #8a8a8b;
+      padding-bottom: 25px;
+    }
+
+    &-lead{
+      color: $txtcol;
+    }
+  }
+}
+//==========End of Blog sectuon style==========
 
 //END OF STYLES
 @import 'media';

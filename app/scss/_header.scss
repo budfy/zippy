@@ -51,12 +51,14 @@
     @include monbold;
     font-size: 41px;
     margin-bottom: 43px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
   }
 
   &-text{
     @include robo;
     font-size: 20px;
     margin-bottom: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
   }
 }
 

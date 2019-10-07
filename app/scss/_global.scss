@@ -9,10 +9,12 @@ html{
 
 html, body{
   height:100%;
+  background-color: $bgcolor;
 }
 
 body{
   color: $txtcol;
+  background-color: $bgcolor;
 }
 
 section{

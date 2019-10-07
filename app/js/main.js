@@ -99,6 +99,7 @@ $(function(){
     asNavFor: '.lifein__nav'
   });
   $('.lifein__nav').slick({
+    rows: '0',
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.lifein__gallery',
@@ -106,5 +107,29 @@ $(function(){
     centerMode: true,
     focusOnSelect: true
   });
+
+  var paralax = document.getElementById("signup__bg");
+
+  /* коэфициент сдвига: 1 сдвиг равный смещению по  оси Y, 0 без сдвига */
+  var moveCoef = 0.2;
+
+  window.addEventListener("scroll", scroll);
+  window.addEventListener("resize", scroll);
+  scroll();
+
+  function scroll() {
+    /* берём огнаничивающий прямоугольник паралакса   относительно окна (фрейма) */
+    var r = paralax.getBoundingClientRect();
+
+    /* центр паралакса */
+    var paralaxYCenter = r.y + r.height / 2;
+    /* центр экрана */
+    var scrollYCenter = window.innerHeight / 2;
+
+    /* Вычисляем смещение */
+    var move = (paralaxYCenter - scrollYCenter) *   moveCoef - 100;
+
+    paralax.style.backgroundPositionY = move + "px";
+  };
 
 });
