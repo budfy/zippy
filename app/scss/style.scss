@@ -290,6 +290,71 @@
 //==========Start of Team sectuon style==========
 .team{
   text-align: center;
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    margin-bottom: 64px;
+
+    +div{
+      margin-left: 88px;
+    }
+
+    &:nth-child(4){
+      margin-left: 0;
+    }
+
+    &-photo{
+      height: 173px;
+      width: 173px;
+      border-radius: 50%;
+      border: none;
+
+      .team__avatar-wrapper{
+        height: 173px;
+        width: 173px;
+        border-radius: 50%;
+        display: flex;
+ //       justify-content: center;
+        align-items: center;
+        opacity: 0;
+        padding: 0 27px;
+        transition: all .5s;
+        &:hover{
+          opacity: 1;
+          background-color: rgba(98, 73, 124, .7);
+        }
+        a{
+          font-family: 'icomoon';
+          font-size: 30px;
+          color: white;
+          &:nth-child(2n){
+            margin-left: 26px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
+    &-name{
+      @include monbold;
+      font-size: 15px;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    &-position{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: #a1a1a2;
+    }
+  }
 }
 //==========End of Team sectuon style==========
 

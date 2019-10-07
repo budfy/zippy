@@ -13,3 +13,54 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?r6ectg');
+  src:  url('../fonts/icomoon.eot?r6ectg#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?r6ectg') format('truetype'),
+    url('../fonts/icomoon.woff?r6ectg') format('woff'),
+    url('../fonts/icomoon.svg?r6ectg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google:before {
+  content: "\e900";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-tumblr:before {
+  content: "\f173";
+}
+.icon-behance:before {
+  content: "\f1b4";
+}
