@@ -363,28 +363,72 @@
 //==========Start of Lifein sectuon style==========
 .lifein{
   background-color: $lgrey;
+  padding-bottom: 109px;
 
   &__gallery{
-    width: 700px;
-    height: 430px;
     margin-bottom: 13px;
     
     &-item{
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
+      width: 700px;
+      height: 430px;
     }
   }
 
   &__nav{
-    width: 700px;
-    height: 150px;
+    width: 606px;
+    margin: 0 auto;
+    position: relative;
 
     &-item{
-      width: 100%;
-      height: 100%;
+      width: 111px !important;
+      height: 69px;
+      margin: 0 13px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slick-arrow{
+    position: absolute;
+    top: 47%;
+    z-index: 1;
+    height: 69px;
+    width: 31px;
+    background-color: #2a2a2a;
+    transform: translateY(-50%);
+    font-size: 0;
+    border: none;
+    
+    &::before{
+      content: '';
+      height: 14px;
+      width: 9px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2;
+    }
+
+    &:hover{
+      background-color: $violet;
+    }
+
+      &.slick-prev{
+        left: -47px;
+        &::before{
+          background-image: url(../images/icons/galery-arrow-prev.png);
+        }
+      }
+
+      &.slick-next{
+        right: -46px;
+        &::before{
+          background-image: url(../images/icons/galery-arrow-next.png);
+        }
+      }
     }
   }
 

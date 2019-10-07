@@ -45,6 +45,7 @@
   max-width: 500px;
   position: absolute;
   z-index: 1;
+  text-align: left;
 
   &-title{
     @include monbold;

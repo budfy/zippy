@@ -96,12 +96,12 @@ $(function(){
     fade: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    asNavFor: '.slider-nav'
+    asNavFor: '.lifein__nav'
   });
   $('.lifein__nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: '.slider-for',
+    asNavFor: '.lifein__gallery',
     dots: false,
     centerMode: true,
     focusOnSelect: true
