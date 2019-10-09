@@ -372,7 +372,8 @@
   }
 
   &__nav{
-    width: 606px;
+    max-width: 606px;
+    width: 83%;
     margin: 0 auto;
     position: relative;
 
@@ -382,10 +383,11 @@
       margin: 0 13px;
       @include bg;
     }
+  }
 
-    .slick-arrow{
+  .slick-arrow{
     position: absolute;
-    top: 47%;
+    bottom: -116px;
     z-index: 1;
     height: 69px;
     width: 31px;
@@ -411,20 +413,19 @@
     }
 
       &.slick-prev{
-        left: -47px;
+        left: 0;
         &::before{
           background-image: url(../images/icons/galery-arrow-prev.png);
         }
       }
 
       &.slick-next{
-        right: -46px;
+        right: 0;
         &::before{
           background-image: url(../images/icons/galery-arrow-next.png);
         }
       }
     }
-  }
 }
 //==========End of Lifein sectuon style==========
 
@@ -581,7 +582,8 @@
     }
 
     &-inner{
-      width: 311px;
+      max-width: 311px;
+      width: 100%;
     }
 
     input, textarea{

@@ -114,7 +114,8 @@ $(function(){
     asNavFor: '.lifein__gallery',
     dots: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    appendArrows: $('.lifein__gallery')
   });
 
   var paralax = document.getElementById("signup__bg");
@@ -140,5 +141,10 @@ $(function(){
 
     paralax.style.backgroundPositionY = move + "px";
   };
+
+  $('.header__adaptive-burger-button').click(function(){
+    $(this).toggleClass('open');
+    $('.header__adaptive-menu').toggleClass('active');
+  });
 
 });

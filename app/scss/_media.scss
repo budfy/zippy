@@ -1,5 +1,13 @@
-@media (max-width: 1084px){
+@media (max-width: 1084px) {
+  .projects__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  .projects__item {
+    max-width: 350px;
+
+  }
 }
 
 @media (max-width: 720px) {
@@ -8,31 +16,86 @@
   }
 
   .header__adaptive {
-      display: block;
-      position: fixed;
-      top: 0;
-      z-index: 2;
-      min-width: 100%;
-      justify-content: space-between;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $violet;
+
+    &-top-logo {
+      height: 50px;
+      display: flex;
       align-items: center;
-      background-color: $violet;
+      margin: 0 15px;
+    }
 
-      .header__adaptive-top-logo {
-        a {
-          height: 50px;
-          display: block;
-          align-items: center;
-          img{
-            
-          }
+    &-burger-button {
+      width: 30px;
+      height: 100%;
+      font-size: 20px;
+    }
+
+    &-menu{
+      background-color: rgba(98, 73, 124, .5);
+      z-index: 2;
+      position: fixed;
+      height: 100%;
+      width: 30vh;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: all .5s;
+      right: -1px;
+      top: 50px;
+      text-align: right;
+
+      li{
+        width: 100%;
+
+        &:active{
+          background-color: $violet;
         }
+      }
 
+      a{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        display: block;
+        margin: 20px;
+      }
+
+      &.active{
+        transform: scaleX(1);
       }
 
     }
+  }
 
   .swiped {
     background-color: rgba(98, 73, 124, .5);
+  }
+
+  .blog__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .blog__item {
+      margin: 15px auto;
+
+      &+div {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .welcome__inner {
+    margin: 0 auto;
   }
 }
 
