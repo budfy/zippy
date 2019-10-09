@@ -8,13 +8,15 @@ html{
 }
 
 html, body{
-  height:100%;
+  //height:100%;
   background-color: $bgcolor;
 }
 
 body{
   color: $txtcol;
   background-color: $bgcolor;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 section{

@@ -20,6 +20,15 @@ $(function(){
         $('.header-top__inner').removeClass('scrolled');
     }
   });
+  
+  $(window).scroll(function() {
+    if($(this).scrollTop() >= window.innerHeight / 2) {
+        $('.header__adaptive').addClass('swiped');
+    }
+    else{
+        $('.header__adaptive').removeClass('swiped');
+    }
+  });
 
   $(".header-top__menu, .header__text-inner").on("click", "a", function(event) {
     //отменяем стандартную обработку нажатия по ссылке
@@ -41,7 +50,7 @@ $(function(){
       boxClass:     'wow',      // animated element css class (default is wow)
       animateClass: 'animated', // animation css class (default is animated)
       offset:       300,          // distance to the element when triggering the animation (default is 0)
-      mobile:       true,       // trigger animations on mobile devices (default is true)
+      mobile:       false,       // trigger animations on mobile devices (default is true)
       live:         true,       // act on asynchronously loaded content (default is true)
       callback:     function(box) {
         // the callback is fired every time an animation is started

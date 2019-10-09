@@ -1,0 +1,43 @@
+@media (max-width: 1084px){
+
+}
+
+@media (max-width: 720px) {
+  .header {
+    display: none;
+  }
+
+  .header__adaptive {
+      display: block;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+      min-width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $violet;
+
+      .header__adaptive-top-logo {
+        a {
+          height: 50px;
+          display: block;
+          align-items: center;
+          img{
+            
+          }
+        }
+
+      }
+
+    }
+
+  .swiped {
+    background-color: rgba(98, 73, 124, .5);
+  }
+}
+
+@media (min-width: 721px) {
+  .header {
+    display: block !important;
+  }
+}
