@@ -433,6 +433,7 @@
 
 //==========Start of Newsletter signup sectuon style==========
 .signup{
+  background-color: #efefef;
     
   &__inner{
     position: relative;
@@ -490,6 +491,7 @@
   width: 100%;
   min-height: 100%;
   @include bg;
+  background-size: auto 200%;
   padding-bottom: 150px;
 }
 //==========End of Newsletter signup sectuon style==========

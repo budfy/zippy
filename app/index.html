@@ -15,7 +15,7 @@
   <div class="content__wrapper">
     <div class="content">
       <!--   WRITE CONTENT CODE HERE ==>   -->
-      <header class="header" id="header">
+      <header class="header">
         <div class="header__inner">
 
           <div class="header-top__inner">
@@ -48,7 +48,17 @@
           <a href="#header"><img src="images/icons/zippy.png" alt="Zippy"></a>
         </div>
         <div class="header__adaptive-burger-button">
-          open
+          <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path
+                  class="line top"
+                  d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path
+                  class="line middle"
+                  d="m 70,50 h -40" />
+            <path
+                  class="line bottom"
+                  d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+          </svg>
         </div>
         <div class="header__adaptive-menu">
             <nav class="header__adaptive-menu-nav">
@@ -62,12 +72,12 @@
               </ul>
             </nav>
             <div class="header__adaptive-menu-social">
-              <a href="#" class="footer__item-soc">&#xf1b4</a>
-              <a href="#" class="footer__item-soc">&#xf099</a>
-              <a href="#" class="footer__item-soc">&#xf0e1</a>
-              <a href="#" class="footer__item-soc">&#xf09a</a>
-              <a href="#" class="footer__item-soc">&#xe900</a>
-              <a href="#" class="footer__item-soc">&#xf173</a>
+              <a href="#">&#xf1b4</a>
+              <a href="#">&#xf099</a>
+              <a href="#">&#xf0e1</a>
+              <a href="#">&#xf09a</a>
+              <a href="#">&#xe900</a>
+              <a href="#">&#xf173</a>
             </div>
         </div>
         
@@ -76,7 +86,7 @@
 
 
 
-      <section class="header__background">
+      <section class="header__background" id="header">
         <div class="container">
           <div class="header__text-inner">
             <h1 class="header__text-inner-title">One page promising to fill all your needs!</h1>
@@ -484,7 +494,7 @@
 
       <section class="contact" id="contact">
         <div class="contact__wrapper">
-          <div class="contact__map wow fadeInLeftBig">
+          <div class="contact__map wow fadeInLeftBig" id="contact__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6292.230556811566!2d35.04231820084891!3d48.465027638258995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2c2c60241bd%3A0x999c964048051b3e!2z0JzQntCh0KItQ9C40YLQuA!5e0!3m2!1sru!2sua!4v1570492639332!5m2!1sru!2sua"
               width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -525,9 +535,13 @@
           <div class="footer__item adress">
             <div class="footer__item-title">Office Address</div>
             <div class="footer__item-content">
-              Lorem Ipsum dolor, 234
-              1200 Consecture
-              Adipsching
+              <address>
+                <a href="#contact__map">
+                  Lorem Ipsum dolor, 234
+                  1200 Consecture
+                  Adipsching
+                </a>
+              </address>
             </div>
           </div>
           <div class="footer__item social">

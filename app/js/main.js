@@ -76,26 +76,6 @@ $(function(){
     centerMode: true,
     variableWidth: true,
     arrows:true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
   });
 
   $('.lifein__gallery').slick({
@@ -121,7 +101,7 @@ $(function(){
   var paralax = document.getElementById("signup__bg");
 
   /* коэфициент сдвига: 1 сдвиг равный смещению по  оси Y, 0 без сдвига */
-  var moveCoef = 0.2;
+  var moveCoef = 0.3;
 
   window.addEventListener("scroll", scroll);
   window.addEventListener("resize", scroll);
@@ -146,5 +126,5 @@ $(function(){
     $(this).toggleClass('open');
     $('.header__adaptive-menu').toggleClass('active');
   });
-
+ 
 });
